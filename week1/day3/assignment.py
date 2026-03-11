@@ -19,10 +19,11 @@ with st.sidebar:
     st.slider("Model Teamperature" ,min_value = 0.00, max_value = 2.00, value = 1.00)
 
 st.header("Chat With HonraAI")
-with st.chat_message("user"):
-    st.write("Hello")
-with st.chat_message("assistant"):
-    st.write("Hello there! I'm HonraAI, your friendly and informative assistant specializing in heart disease. I'm here to help you with questions about heart health, conditions, and riskfactors. How can i assist you today?")
-    st.button("Read aloud")
+with st.container(height=350, border=True,):
+    with st.chat_message("user"):
+        st.write("Hello")
+    with st.chat_message("assistant"):
+        st.write("Hello there! I'm HonraAI, your friendly and informative assistant specializing in heart disease. I'm here to help you with questions about heart health, conditions, and riskfactors. How can i assist you today?")
+        st.button("Read aloud")
 st.divider()
 st.chat_input("Message HonraAI")
